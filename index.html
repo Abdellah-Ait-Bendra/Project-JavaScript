@@ -504,8 +504,10 @@
       },
     ];
     function getTasckFrommLocalStorege() {
-      tasks = JSON.parse(localStorage.getItem("tasks"));
+      let retTasks = JSON.parse(localStorage.getItem("tasks"));
+      tasks = retTasks ?? [];
     }
+
     getTasckFrommLocalStorege();
 
     function fillTasckInPag() {
